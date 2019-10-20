@@ -45,6 +45,7 @@ export class SearchForm extends React.Component<any, any> {
 }
 
 const mapStateToProps = (state: any) => ({
+    //error here
     text: state.movies.text
 });
 
