@@ -20,6 +20,7 @@ export class MoviesContainer extends React.Component<any, any> {
 }
 
 const mapStateToProps = (state: any) => ({
+    //error here
     movies: state.movies.movies
 });
 
