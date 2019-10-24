@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { connect } from 'react-redux';
 
@@ -18,8 +18,12 @@ export class Landing extends React.Component<any, any> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
-  // loading: state.movies.loading
-});
+const mapStateToProps = (state: any) => {
+  console.log(state);
+
+  return {
+    loading: state.movies.loading
+  }
+};
 
 export default connect(mapStateToProps)(Landing);

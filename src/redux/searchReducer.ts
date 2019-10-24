@@ -14,8 +14,25 @@ export default function (state = initialState, action: any) {
                 ...state,
                 text: action.payload,
                 loading: false
-            }
+            };
+        case Actions.FETCH_MOVIES:
+            return {
+                ...state,
+                movies: action.payload,
+                loading: false
+            };
+        case Actions.FETCH_MOVIE:
+            return {
+                ...state,
+                movie: action.payload,
+                loading: false
+            };
+        case Actions.LOADING:
+            return {
+                ...state,
+                loading: true
+            };
         default:
-            return state
+            return state;
     }
 }
