@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { connect } from 'react-redux';
 
@@ -19,8 +19,12 @@ export class MoviesContainer extends React.Component<any, any> {
     }
 }
 
-const mapStateToProps = (state: any) => ({
-    movies: state.movies.movies
-});
+const mapStateToProps = (state: any) => {
+    console.log(state);
+
+    return {
+        movies: state.movies.movies
+    }
+}
 
 export default connect(mapStateToProps)(MoviesContainer);

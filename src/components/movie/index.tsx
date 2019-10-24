@@ -75,10 +75,19 @@ export class Movie extends React.Component<any, any> {
     }
 }
 
-const mapStateToProps = (state: any) => ({
-    loading: state.movies.loading,
-    movie: state.movies.movie
-});
+const mapStateToProps = (state: any) => {
+    console.log(state);
+
+    return {
+        loading: state.movies.loading,
+        movie: state.movies.movie
+    }
+}
+
+// const mapStateToProps = (state: any) => ({
+//     loading: state.movies.loading,
+//     movie: state.movies.movie
+// });
 
 export default connect(
     mapStateToProps,

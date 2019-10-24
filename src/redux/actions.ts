@@ -1,6 +1,4 @@
 import Actions from "./actions.config"
-
-
 import axios from 'axios';
 
 
@@ -20,6 +18,8 @@ export const fetchMovies = (text: any) => (dispatch: any) => {
                 type: Actions.FETCH_MOVIES,
                 payload: response.data
             })
+
+
         )
         .catch(err => console.log(err));
 };
@@ -28,6 +28,7 @@ export const fetchMovie = (id: any) => (dispatch: any) => {
     axios
         .get(`https://www.omdbapi.com/?apikey=2c7db622&i=${id}`)
         .then(response =>
+
             dispatch({
                 type: Actions.FETCH_MOVIE,
                 payload: response.data

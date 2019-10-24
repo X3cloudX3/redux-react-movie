@@ -43,10 +43,14 @@ export class SearchForm extends React.Component<any, any> {
         );
     }
 }
+const mapStateToProps = (state: any) => {
+    console.log(state);
 
-const mapStateToProps = (state: any) => ({
-    text: state.movies.text
-});
+    return {
+        text: state.movies.text
+    }
+}
+
 
 export default connect(
 
